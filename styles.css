@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    background-color: #d1ecff;
+    background-image: url("background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #023da5;
+}
+
+.kidneyicon {
+    width: 2.5rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem .5rem;
+    padding: 2rem 1rem;
+    width: 100%;
+    min-height: 200px;
+}
+
+.homeimg {
+    width: 100%;
+}
+
+.subtitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.btn {
+    margin-top: 10px;
+    font-weight: bold;
+}
+.firstpage-content{
+    font-size: 1.2rem;
+}
+
+.secondpage{
+    padding-top: 5rem;
+}
+
+form {
+    padding: 0 10%;
+}
+
+form section {
+    width: calc(50% - 40px);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+form section.left {
+    float: left;
+}
+
+form section.right {
+    float: right;
+}
+
+form section .input-container {
+    padding: 20px;
+}
+form section .input-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+form section .input-container select{
+    width: 100%;
+    padding: 20px 20px;
+    background-color: white;
+    box-shadow: 1px 1px 2px 1px gray;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+}
+
+form section .input-container select:focus {
+    outline: none;
+    background: white;
+}
+
+form section .input-container textarea {
+    height: 122px;
+    padding: 15px 10px;
+    resize: none;
+}
+
+form .send-container {
+    text-align: center;
+}
+
+form .send-container input {
+    margin: 1.2rem;
+    background: #dc3545;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form .send-container input:hover {
+    background: #d82234;
+}
+
+form:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@media (max-width: 992px) {
+    form {
+      padding: 0 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    form {
+      margin-bottom: 50px;
+      align-self: center;
+    }
+    form section {
+      width: 100%;
+      margin: 0;
+    }
+    form section.left {
+      margin-bottom: -30px;
+    }
+    form .send-container {
+      margin-right: 0;
+      margin-top: 15px;
+    }
+    form .send-container select {
+      width: 100%;
+    }
+}
+
+@media screen and (min-width: 1018px) {
+    .firstpage{
+        height: 100vh;
+    }
+
+    .secondpage{
+        height: 100vh;
+    }
+}
