@@ -4,7 +4,6 @@
 
 body {
     min-width: 320px;
-    background-color: #addef5;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,14 +12,7 @@ body {
 }
 
 /************************* first page styling ************************/
-.navbar{
-    background-color: #023da5;
-}
 
-.navbar-brand,
-.nav-link {
-    color: #ffffff;
-}
 
 .kidneyicon {
     width: 2.5rem;
@@ -44,6 +36,7 @@ body {
 .title {
     font-size: 2.5rem;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .btn {
@@ -56,10 +49,6 @@ body {
 /****************************** end of first page styling ************************/
 
 /****************************** second page styling ******************************/
-.secondpage{
-    padding-top: 5rem;
-}
-
 form {
     padding: 0 10%;
 }
@@ -137,6 +126,10 @@ form:after {
 /****************************** end of second page styling ***************************/
 
 /****************************** attributes page styling ******************************/
+.thirdpage{
+    margin: 5rem 0;
+}
+
 .titles{
     font-weight: bold;
     text-align: center;
@@ -216,7 +209,6 @@ form:after {
     font-size: 14px;
     font-weight: 300;
     line-height: 20px;
-    color: #7f88a6;
     padding: 27px 0px;
 }
 .new_footer_top .company_widget p {
@@ -302,10 +294,11 @@ a:hover, a:focus {
 .new_footer_top .f_social_icon a:hover {
     background: #5e2ced;
     border-color: #5e2ced;
-  color:white;
+    color:white;
 }
 .new_footer_top .f_social_icon a + a {
     margin-left: 4px;
+    text-decoration: none;
 }
 .new_footer_top .f-title {
     margin-bottom: 30px;
@@ -317,11 +310,10 @@ a:hover, a:focus {
 .f_size_18 {
     font-size: 18px;
 }
-h1, h2, h3, h4, h5, h6 {
-    color: #4b505e;
-}
+
 .new_footer_top .f_widget.about-widget .f_list li a {
-    color: #6a7695;
+    color: #3e4044;
+    text-decoration: none;
 }
 
 .new_footer_top .footer_bg {
@@ -419,10 +411,6 @@ h1, h2, h3, h4, h5, h6 {
     }
     .homeimg {
         width: 130%;
-    }
-
-    .secondpage{
-        height: 100vh;
     }
 }
 /****************************** end of responsiveness ******************************/
