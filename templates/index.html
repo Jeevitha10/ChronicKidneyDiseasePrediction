@@ -19,19 +19,18 @@
 
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/styles.css')}}">
 </head>
 
 <body>
     <!------------------------------ first page ---------------------------->
     <!------------------------------ navbar -------------------------------->
     <header class="firstpage">
-        <nav class="navbar navbar-expand-lg px-4">
+        <nav class="my-nav navbar navbar-expand-lg px-4">
             <!-- left side of the navbar -->
             <div class="container-fluid">
-                <a class="navbar-brand fs-2" href="#">
-                    <img class="kidneyicon" src="kidneyicon.png" alt="kidneyicon">
-                    CKD
+                <a class="navbar-brand fs-2 nav-link" href="/">
+                    <img class="kidneyicon" src="{{url_for('static', filename='images/kidneyicon.png')}}" alt="kidneyicon"> RENAL
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -44,62 +43,86 @@
             <!-- right side of the navbar -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-4">
-                    <li class="nav-item px-4">
+                    <li class="nav-item px-4 mt-2">
                         <a class="nav-link" aria-current="page"
                             href="https://raw.githubusercontent.com/Jeevitha10/ChronicKidneyDiseasePrediction/main/kidney_disease.csv"
                             target="_blank">Dataset</a>
                     </li>
 
-                    <li class="nav-item px-4">
+                    <li class="nav-item px-4 mt-2">
                         <a class="nav-link" href="#attr">Terms</a>
                     </li>
 
-                    <li class="nav-item px-4">
+                    <li class="nav-item px-4 mt-2">
                         <a class="nav-link">Accuracy</a>
+                    </li>
+
+                    <li class="nav-item px-4">
+                        <a class="btn btn-danger fs-4 px-5 py-2" href="#formpage" role="button">Predict</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
         <!---------------------------- body content ----------------------->
-        <div class="container">
-            <div class="row mt-5">
-                <div class="col-xs-12 col-md-6 col-sm-6">
-                    <div class="box">
-                        <div>
-                            <h2 class="mb-5 title">What is CKD?</h2>
-                            <p class="firstpage-content">One of the most serious illnesses nowadays is chronic kidney
-                                disease, for
-                                which a correct diagnosis
-                                must be made as soon as possible. The use of machine learning in healthcare has
-                                increased.
-                                The
-                                clinician can identify the ailment early with the aid of machine learning classifier
-                                algorithms.
-                                CKD
-                                dataset is used for this research.This dataset is being provided by the UC Irvine
-                                Machine
-                                Learning
-                                Repository and it is available on the UCI website. This dataset contains 400 instances
-                                and
-                                24
-                                attributes with 1 target attribute. The target attribute has labelled in two-class to
-                                represent
-                                CKD
-                                or non-CKD. Classification algorithms and important feature selection will be applied.
-                                Various
-                                learning algorithms will also be discussed to get the maximum accuracy.</p>
-                            <a class="btn btn-danger fs-4 px-5 py-2" href="#formpage" role="button">Predict</a>
-                        </div>
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{url_for('static', filename='images/kidney.jpg')}}" class="d-block w-100" alt="ckd">
+
+                    <div class="carousel-caption d-md-block">
+                        <h3 class="subtitle">CHRONIC KIDNEY DISEASE</h3>
+
+                        <p class="desc">Some representative placeholder content for the first slide.</p>
                     </div>
                 </div>
 
-                <div class="col-xs-12 col-md-6 col-sm-6">
-                    <div class="box m-5 p-5">
-                        <img class="homeimg" src="homekid.png" alt="Chronic kidney disease prediction">
+                <div class="carousel-item">
+                    <img src="{{url_for('static', filename='images/challenges.jpg')}}" class="d-block w-100" alt="challenges">
+
+                    <div class="carousel-caption d-md-block">
+                        <h3 class="subtitle">CHALLENGES</h3>
+
+                        <p class="desc">Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{{url_for('static', filename='images/reports.jpg')}}" class="d-block w-100" alt="reports">
+
+                    <div class="carousel-caption d-md-block">
+                        <h3 class="subtitle">OUR WORK</h3>
+
+                        <p class="desc">Some representative placeholder content for the third slide.</p>
                     </div>
                 </div>
             </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </header>
     <!---------------------------- end of first page ---------------------------->
@@ -197,99 +220,112 @@
     <!---------------------------- end of second page(form) ---------------------------->
 
     <!---------------------------- attributes used in the prediction ------------------->
-    <h2 class="titles" id="attr">ATTRIBUTES USED IN THE PREDICTION</h2>
+    <div>
+        <h2 class="titles" id="attr">ATTRIBUTES USED IN THE PREDICTION</h2>
 
-    <section class="wrapper">
-        <div class="card">
-            <h3 class="card-title">CARD TITLE</h3>
+        <section class="wrapper">
 
-            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <div class="card">
+                <h3 class="card-title">CARD TITLE</h3>
 
-            <button class="card-btn">READ MORE</button>
-        </div>
+                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
-        <div class="card">
-            <h3 class="card-title">CARD TITLE</h3>
+                <button class="card-btn">READ MORE</button>
+            </div>
 
-            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <div class="card">
+                <h3 class="card-title">CARD TITLE</h3>
 
-            <button class="card-btn">READ MORE</button>
-        </div>
+                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
-        <div class="card">
-            <h3 class="card-title">CARD TITLE</h3>
+                <button class="card-btn">READ MORE</button>
+            </div>
 
-            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <div class="card">
+                <h3 class="card-title">CARD TITLE</h3>
 
-            <button class="card-btn">READ MORE</button>
-        </div>
+                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
-        <div class="card">
-            <h3 class="card-title">CARD TITLE</h3>
+                <button class="card-btn">READ MORE</button>
+            </div>
 
-            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <div class="card">
+                <h3 class="card-title">CARD TITLE</h3>
 
-            <button class="card-btn">READ MORE</button>
-        </div>
+                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
-        <div class="card">
-            <h3 class="card-title">CARD TITLE</h3>
+                <button class="card-btn">READ MORE</button>
+            </div>
 
-            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <div class="card">
+                <h3 class="card-title">CARD TITLE</h3>
 
-            <button class="card-btn">READ MORE</button>
-        </div>
+                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
-        <div class="card">
-            <h3 class="card-title">CARD TITLE</h3>
+                <button class="card-btn">READ MORE</button>
+            </div>
 
-            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <div class="card">
+                <h3 class="card-title">CARD TITLE</h3>
 
-            <button class="card-btn">READ MORE</button>
-        </div>
+                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
-        <div class="card">
-            <h3 class="card-title">CARD TITLE</h3>
+                <button class="card-btn">READ MORE</button>
+            </div>
 
-            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <div class="card">
+                <h3 class="card-title">CARD TITLE</h3>
 
-            <button class="card-btn">READ MORE</button>
-        </div>
+                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
-        <div class="card">
-            <h3 class="card-title">CARD TITLE</h3>
+                <button class="card-btn">READ MORE</button>
+            </div>
 
-            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <div class="card">
+                <h3 class="card-title">CARD TITLE</h3>
 
-            <button class="card-btn">READ MORE</button>
-        </div>
+                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
-        <div class="card">
-            <h3 class="card-title">CARD TITLE</h3>
+                <button class="card-btn">READ MORE</button>
+            </div>
 
-            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <div class="card">
+                <h3 class="card-title">CARD TITLE</h3>
 
-            <button class="card-btn">READ MORE</button>
-        </div>
+                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 
-        <div class="card">
-            <h3 class="card-title">CARD TITLE</h3>
+                <button class="card-btn">READ MORE</button>
+            </div>
 
-            <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            <div class="card">
+                <h3 class="card-title">CARD TITLE</h3>
 
-            <button class="card-btn">READ MORE</button>
-        </div>
-    </section>
+                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                    in a
+                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+
+                <button class="card-btn">READ MORE</button>
+            </div>
+        </section>
+    </div>
     <!---------------------------- end of attribute page ---------------------------->
 
     <!---------------------------- footer ------------------------------------------->

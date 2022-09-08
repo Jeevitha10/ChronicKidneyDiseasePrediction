@@ -4,8 +4,8 @@
 
 body {
     min-width: 320px;
-    background-color: #addef5;
     height: 100%;
+    background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,53 +13,54 @@ body {
 }
 
 /************************* first page styling ************************/
-.navbar{
-    background-color: #023da5;
+.my-nav{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
 }
 
-.navbar-brand,
-.nav-link {
-    color: #ffffff;
+.carousel-inner{
+    text-align: center;
+}
+
+.carousel-item img{
+    filter: brightness(65%);
+    height: 100vh;
+}
+
+.carousel-caption{
+    margin-bottom: 50vh;
 }
 
 .kidneyicon {
-    width: 2.5rem;
+    width: 3rem;
 }
 
-.box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 1.5rem .5rem;
-    padding: 2rem 1rem;
-    width: 100%;
-    min-height: 200px;
-}
-
-.homeimg {
-    width: 100%;
-}
-
-.title {
-    font-size: 2.5rem;
+.nav-link{
     font-weight: bold;
+    color: white;
+}
+.nav-link:hover{
+    color: #d7d7e0;
 }
 
 .btn {
     margin-top: 10px;
     font-weight: bold;
 }
-.firstpage-content{
-    font-size: 1.2rem;
+
+.subtitle{
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.desc{
+    font-weight: normal;
+    font-size: 2rem;
 }
 /****************************** end of first page styling ************************/
 
 /****************************** second page styling ******************************/
-.secondpage{
-    padding-top: 5rem;
-}
-
 form {
     padding: 0 10%;
 }
@@ -137,7 +138,12 @@ form:after {
 /****************************** end of second page styling ***************************/
 
 /****************************** attributes page styling ******************************/
+.thirdpage{
+    margin: 5rem 0;
+}
+
 .titles{
+    padding-top: 3rem;
     font-weight: bold;
     text-align: center;
 }
@@ -216,7 +222,6 @@ form:after {
     font-size: 14px;
     font-weight: 300;
     line-height: 20px;
-    color: #7f88a6;
     padding: 27px 0px;
 }
 .new_footer_top .company_widget p {
@@ -302,10 +307,11 @@ a:hover, a:focus {
 .new_footer_top .f_social_icon a:hover {
     background: #5e2ced;
     border-color: #5e2ced;
-  color:white;
+    color:white;
 }
 .new_footer_top .f_social_icon a + a {
     margin-left: 4px;
+    text-decoration: none;
 }
 .new_footer_top .f-title {
     margin-bottom: 30px;
@@ -317,11 +323,10 @@ a:hover, a:focus {
 .f_size_18 {
     font-size: 18px;
 }
-h1, h2, h3, h4, h5, h6 {
-    color: #4b505e;
-}
+
 .new_footer_top .f_widget.about-widget .f_list li a {
-    color: #6a7695;
+    color: #3e4044;
+    text-decoration: none;
 }
 
 .new_footer_top .footer_bg {
@@ -393,6 +398,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+    .carousel-caption{
+        margin-bottom: 30vh;
+    }
     form {
       margin-bottom: 50px;
       align-self: center;
@@ -419,10 +427,6 @@ h1, h2, h3, h4, h5, h6 {
     }
     .homeimg {
         width: 130%;
-    }
-
-    .secondpage{
-        height: 100vh;
     }
 }
 /****************************** end of responsiveness ******************************/
