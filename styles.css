@@ -5,6 +5,7 @@
 body {
     min-width: 320px;
     height: 100%;
+    background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,39 +13,50 @@ body {
 }
 
 /************************* first page styling ************************/
+.my-nav{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+}
 
+.carousel-inner{
+    text-align: center;
+}
+
+.carousel-item img{
+    filter: brightness(65%);
+    height: 100vh;
+}
+
+.carousel-caption{
+    margin-bottom: 50vh;
+}
 
 .kidneyicon {
-    width: 2.5rem;
+    width: 3rem;
 }
 
-.box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 1.5rem .5rem;
-    padding: 2rem 1rem;
-    width: 100%;
-    min-height: 200px;
-}
-
-.homeimg {
-    width: 100%;
-}
-
-.title {
-    font-size: 2.5rem;
+.nav-link{
     font-weight: bold;
-    margin-bottom: 30px;
+    color: white;
+}
+.nav-link:hover{
+    color: #d7d7e0;
 }
 
 .btn {
     margin-top: 10px;
     font-weight: bold;
 }
-.firstpage-content{
-    font-size: 1.2rem;
+
+.subtitle{
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.desc{
+    font-weight: normal;
+    font-size: 2rem;
 }
 /****************************** end of first page styling ************************/
 
@@ -131,6 +143,7 @@ form:after {
 }
 
 .titles{
+    padding-top: 3rem;
     font-weight: bold;
     text-align: center;
 }
@@ -385,6 +398,9 @@ a:hover, a:focus {
 }
 
 @media (max-width: 768px) {
+    .carousel-caption{
+        margin-bottom: 30vh;
+    }
     form {
       margin-bottom: 50px;
       align-self: center;
