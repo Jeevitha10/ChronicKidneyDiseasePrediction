@@ -57,6 +57,7 @@ body {
 .desc{
     font-weight: normal;
     font-size: 2rem;
+    position: absolute;
 }
 /****************************** end of first page styling ************************/
 

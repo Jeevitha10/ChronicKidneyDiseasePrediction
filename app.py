@@ -1,4 +1,3 @@
-from crypt import methods
 from distutils.log import debug
 from flask import Flask, render_template, request
 
