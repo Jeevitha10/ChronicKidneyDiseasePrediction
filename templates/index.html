@@ -19,10 +19,13 @@
 
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="{{url_for('static', filename='styles/styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/index.css')}}">
 </head>
 
 <body>
+    <div data-bot-id="272514">  
+    </div> 
+
     <!------------------------------ first page ---------------------------->
     <!------------------------------ navbar -------------------------------->
     <header class="firstpage">
@@ -135,7 +138,7 @@
     <!---------------------------- second page ---------------------------------->
     <section class="secondpage" id="formpage">
         <h2 class="titles">CHRONIC KIDNEY DISEASE PREDICTION</h2>
-        <form action="">
+        <form action="{{ url_for('predict') }}" method="POST">
             <section class="left">
                 <div class="input-container">
                     <label for="sg">Specific Gravity</label>
@@ -428,6 +431,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-</body>
+    
+    <script src="https://account.snatchbot.me/script.js"></script>
+    <script>window.sntchChat.Init(272514)</script>
 
+</body>
 </html>
