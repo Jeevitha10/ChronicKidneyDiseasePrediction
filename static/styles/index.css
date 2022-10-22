@@ -61,6 +61,15 @@ body {
 }
 /****************************** end of first page styling ************************/
 
+/****************************** chat bot styling ************************/
+#sntch_button{
+    position:absolute;
+    bottom: 50px !important;
+    right: 50px !important;
+}
+/****************************** end of chat bot styling ************************/
+
+
 /****************************** second page styling ******************************/
 form {
     padding: 0 10%;
@@ -84,13 +93,14 @@ form section.right {
 form section .input-container {
     padding: 20px;
 }
+
 form section .input-container label {
     display: block;
     margin-bottom: 10px;
     font-size: 1.2rem;
 }
 
-form section .input-container select{
+form section .input-container select, form section .input-container input{
     width: 100%;
     padding: 20px 20px;
     background-color: white;
@@ -100,7 +110,15 @@ form section .input-container select{
     font-size: 16px;
 }
 
-form section .input-container select:focus {
+form section .input-container select:invalid {
+    color: gray;
+}
+
+form section .input-container select [disabled] {
+    color: gray;
+}
+
+form section .input-container select:focus, form section .input-container input:focus{
     outline: none;
     background: white;
 }
@@ -177,11 +195,13 @@ form:after {
     font-weight: 600;
     letter-spacing: 1.2px;
 }
+
 .card-content{
     font-size: 14px;
     letter-spacing: 0.5px;
     line-height: 1.5;
 }
+
 .card-btn{
     all: unset;
     display: block;
@@ -195,25 +215,22 @@ form:after {
     cursor: pointer;
     letter-spacing: 1.2px;
 }
+
 .card-btn:hover{
    color:#02b875;
    background: #FFF;
 }
+
 .card:nth-child(2) .card-btn:hover{
    color:#4181ee;
    background: #FFF;
 }
+
 .card:last-child .card-btn:hover{
    color:#673ab7;
     background: #FFF;
 }
 /****************************** end of attributes page styling ******************************/
-
-#sntch_button{
-    position:absolute;
-    bottom: 50px !important;
-    right: 50px !important;
-}
 
 /****************************** footer styling ******************************/
 .new_footer_top {
@@ -221,16 +238,19 @@ form:after {
     position: relative;
       overflow-x: hidden;
 }
+
 .new_footer_area .footer_bottom {
     padding-top: 5px;
     padding-bottom: 50px;
 }
+
 .footer_bottom {
     font-size: 14px;
     font-weight: 300;
     line-height: 20px;
     padding: 27px 0px;
 }
+
 .new_footer_top .company_widget p {
     font-size: 16px;
     font-weight: 300;
@@ -238,12 +258,13 @@ form:after {
     color: #6a7695;
     margin-bottom: 20px;
 }
+
 .new_footer_top .company_widget .f_subscribe_two .btn_get {
     border-width: 1px;
     margin-top: 20px;
 }
 
-a:hover, a:focus {
+a, a:hover, a:focus {
     text-decoration: none;
     outline: none;
 }
@@ -251,18 +272,23 @@ a:hover, a:focus {
 .new_footer_top .f_widget.about-widget .f_list li a:hover {
     color: #5e2ced;
 }
+
 .new_footer_top .f_widget.about-widget .f_list li {
     margin-bottom: 11px;
 }
+
 .f_widget.about-widget .f_list li:last-child {
     margin-bottom: 0px;
 }
+
 .f_widget.about-widget .f_list li {
     margin-bottom: 15px;
 }
+
 .f_widget.about-widget .f_list {
     margin-bottom: 0px;
 }
+
 .new_footer_top .f_social_icon a {
     width: 44px;
     height: 44px;
@@ -271,6 +297,7 @@ a:hover, a:focus {
     border: 1px solid #e2e2eb;
     font-size: 24px;
 }
+
 .f_social_icon a {
     width: 46px;
     height: 46px;
@@ -285,15 +312,19 @@ a:hover, a:focus {
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
+
 .ti-facebook:before {
     content: "\e741";
 }
+
 .ti-twitter-alt:before {
     content: "\e74b";
 }
+
 .ti-vimeo-alt:before {
     content: "\e74a";
 }
+
 .ti-pinterest:before {
     content: "\e731";
 }
@@ -316,17 +347,21 @@ a:hover, a:focus {
     border-color: #5e2ced;
     color:white;
 }
+
 .new_footer_top .f_social_icon a + a {
     margin-left: 4px;
     text-decoration: none;
 }
+
 .new_footer_top .f-title {
     margin-bottom: 30px;
     color: #263b5e;
 }
+
 .f_600 {
     font-weight: 600;
 }
+
 .f_size_18 {
     font-size: 18px;
 }
@@ -443,4 +478,3 @@ a:hover, a:focus {
     }
 }
 /****************************** end of responsiveness ******************************/
-

@@ -23,12 +23,12 @@
 </head>
 
 <body>
-    <div data-bot-id="272514">  
-    </div> 
+    <div data-bot-id="272514">
+    </div>
 
     <!------------------------------ first page ---------------------------->
-    <!------------------------------ navbar -------------------------------->
     <header class="firstpage">
+        <!------------------------------ navbar -------------------------------->
         <nav class="my-nav navbar navbar-expand-lg px-4">
             <!-- left side of the navbar -->
             <div class="container-fluid">
@@ -53,7 +53,7 @@
                     </li>
 
                     <li class="nav-item px-4 mt-2">
-                        <a class="nav-link" href="#attr">Terms</a>
+                        <a class="nav-link" href="https://archive.ics.uci.edu/ml/datasets/chronic_kidney_disease">Terms</a>
                     </li>
 
                     <li class="nav-item px-4 mt-2">
@@ -66,9 +66,9 @@
                 </ul>
             </div>
         </nav>
+        <!------------------------------ end of navbar -------------------------------->
 
         <!---------------------------- body content ----------------------->
-
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -88,8 +88,8 @@
                     <div class="carousel-caption d-md-block">
                         <h3 class="subtitle">CHRONIC KIDNEY DISEASE</h3>
 
-                        <p class="desc">Chronic kidney disease (CKD) means your kidneys are damaged and can't filter blood the way they should. 
-                            The disease is called “chronic” because the damage to your kidneys happens slowly over a long period of time. 
+                        <p class="desc">Chronic kidney disease (CKD) means your kidneys are damaged and can't filter blood the way they should.
+                            The disease is called “chronic” because the damage to your kidneys happens slowly over a long period of time.
                             This damage can cause wastes to build up in your body. CKD can also cause other health problems.</p>
                     </div>
                 </div>
@@ -100,8 +100,8 @@
                     <div class="carousel-caption d-md-block">
                         <h3 class="subtitle">CHALLENGES</h3>
 
-                        <p class="desc">Complications from CKD produce system-wide symptoms. Some of the more common include anemia, heart disease, 
-                            high calcium levels, and bone disease. There are five stages of CKD beginning with mild damage in Stage 1 
+                        <p class="desc">Complications from CKD produce system-wide symptoms. Some of the more common include anemia, heart disease,
+                            high calcium levels, and bone disease. There are five stages of CKD beginning with mild damage in Stage 1
                             to complete failure in Stage 5.</p>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                     <div class="carousel-caption d-md-block">
                         <h3 class="subtitle">MOTIVE</h3>
 
-                        <p class="desc">Chronic Kidney Disease (CKD) is a life-threatening condition that affects nearly 14% of the world's population, 
+                        <p class="desc">Chronic Kidney Disease (CKD) is a life-threatening condition that affects nearly 14% of the world's population,
                             predicting it with the utmost accuracy allows people to be diagnosed  and treated at the lowest possible cost and risk. </p>
                     </div>
                 </div>
@@ -132,6 +132,7 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <!---------------------------- end of body content ----------------------->
     </header>
     <!---------------------------- end of first page ---------------------------->
 
@@ -141,54 +142,98 @@
         <form action="{{ url_for('predict') }}" method="POST">
             <section class="left">
                 <div class="input-container">
-                    <label for="sg">Specific Gravity</label>
+                    <label for="bp">Blood pressure(mm/Hg)</label>
 
-                    <select name="sg">
+                    <input type="number" name="bp" placeholder="Enter a value" required/>
+                </div>
+
+                <div class="input-container">
+                    <label for="al">Albumin</label>
+
+                    <select name="al" required>
                         <option disabled selected value> -- select an option -- </option>
-                        <option value="1.005">1.005</option>
-                        <option value="1.010">1.010</option>
-                        <option value="1.015">1.015</option>
-                        <option value="1.020">1.020</option>
+
+                        {%for i in range(0, 6)%}
+                        <option value={{i}}>{{i}}</option>
+                        {%endfor%}
                     </select>
                 </div>
 
                 <div class="input-container">
-                    <label for="ht">Hyper Tension</label>
+                    <label for="su">Sugar</label>
 
-                    <select name="ht">
+                    <select name="su" required>
                         <option disabled selected value> -- select an option -- </option>
-                        <option value="1">1</option>
 
-                        <option value="0">0</option>
+                        {%for i in range(0, 6)%}
+                        <option value={{i}}>{{i}}</option>
+                        {%endfor%}
                     </select>
                 </div>
 
                 <div class="input-container">
-                    <label for="hg">Hemoglobin</label>
+                    <label for="rbc">Red Blood Cells</label>
 
-                    <select name="hg">
+                    <select name="rbc" required>
                         <option disabled selected value> -- select an option -- </option>
-                        <option value="0-4">0-4</option>
+                        <option value="1">Normal</option>
+
+                        <option value="0">Abnormal</option>
                     </select>
                 </div>
 
                 <div class="input-container">
-                    <label for="dm">Diabetes Mellitus</label>
+                    <label for="pc">Pus Cells</label>
 
-                    <select name="dm">
+                    <select name="pc" required>
                         <option disabled selected value> -- select an option -- </option>
-                        <option value="1">1</option>
+                        <option value="1">Normal</option>
 
-                        <option value="0">0</option>
+                        <option value="0">Abnormal</option>
                     </select>
+                </div>
+
+                <div class="input-container">
+                    <label for="bgr">Blood glucose random(mgs/dl)</label>
+
+                    <input type="number" name="bgr" placeholder="Enter a value" required/>
                 </div>
             </section>
 
             <section class="right">
                 <div class="input-container">
-                    <label for="ht">Appetite</label>
+                    <label for="sc">Serum Creatinine(mgs/dl)</label>
 
-                    <select name="ht">
+                    <input type="number" name="sc" step="any" placeholder="Enter a value" required/>
+                </div>
+
+                <div class="input-container">
+                    <label for="pot">Potassium(mEq/L)</label>
+
+                    <input type="number" name="pot" step="any" placeholder="Enter a value" required/>
+                </div>
+
+                <div class="input-container">
+                    <label for="hemo">Hemoglobin(gms)</label>
+
+                    <input type="number" name="hemo" step="any" placeholder="Enter a value" required/>
+                </div>
+
+                <div class="input-container">
+                    <label for="htn">Hypertension</label>
+
+                    <select name="htn" required>
+                        <option disabled selected value> -- select an option -- </option>
+                        <option value="1">Yes</option>
+
+                        <option value="0">No</option>
+                    </select>
+                </div>
+
+                <div class="input-container">
+                    <label for="appet">Appetite</label>
+
+                    <select name="appet" required>
                         <option disabled selected value> -- select an option -- </option>
                         <option value="1">1</option>
 
@@ -197,33 +242,13 @@
                 </div>
 
                 <div class="input-container">
-                    <label for="ht">Albumin</label>
+                    <label for="pe">Pedal edema</label>
 
-                    <select name="ht">
+                    <select name="pe" required>
                         <option disabled selected value> -- select an option -- </option>
-                        <option value="1">1</option>
+                        <option value="1">Yes</option>
 
-                        <option value="0">0</option>
-                    </select>
-                </div>
-
-                <div class="input-container">
-                    <label for="ht">RBC count</label>
-                    <select name="ht">
-                        <option disabled selected value> -- select an option -- </option>
-                        <option value="1">1</option>
-                        <option value="0">0</option>
-                    </select>
-                </div>
-
-                <div class="input-container">
-                    <label for="ht">Pus cell</label>
-
-                    <select name="ht">
-                        <option disabled selected value> -- select an option -- </option>
-                        <option value="1">1</option>
-
-                        <option value="0">0</option>
+                        <option value="0">No</option>
                     </select>
                 </div>
             </section>
@@ -378,8 +403,7 @@
 
                                 <li><a href="#">Documentation</a></li>
 
-                                <li><a
-                                        href="https://www.nhm.tn.gov.in/en/nhm-programsnon-communicable-diseases/national-dialysis-programmendp">NDP
+                                <li><a href="https://www.nhm.tn.gov.in/en/nhm-programsnon-communicable-diseases/national-dialysis-programmendp">NDP
                                         events Tamilnadu</a></li>
                             </ul>
                         </div>
@@ -414,12 +438,11 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-sm-7">
-                        <p class="mb-0 f_400">© Team project.. 2022 All rights reserved.</p>
+                        <p class="mb-0 f_400">© Team project 2022 All rights reserved.</p>
                     </div>
 
                     <div class="col-lg-6 col-sm-5 text-right">
-                        <p>Made with <i class="icon_heart"></i> in <a href="https://www.svce.ac.in/"
-                                target="_blank">SVCE</a></p>
+                        <p>Students of <a href="https://www.svce.ac.in/" target="_blank">SVCE</a></p>
                     </div>
                 </div>
             </div>
@@ -431,7 +454,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    
+
     <script src="https://account.snatchbot.me/script.js"></script>
     <script>window.sntchChat.Init(272514)</script>
 
