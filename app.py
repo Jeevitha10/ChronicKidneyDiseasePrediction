@@ -8,6 +8,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route("/accuracy",methods=['GET'])
+def accuracy():
+    return render_template('accuracy.html')
+    
 @app.route("/predict", methods=['POST'])
 def predict():
     if request.method == 'POST':
