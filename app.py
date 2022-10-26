@@ -1,6 +1,9 @@
 from distutils.log import debug
 from flask import Flask, render_template, request
 import pickle
+import numpy as np 
+
+model = pickle.load(open('ckd.pkl','rb'))
 
 app = Flask(__name__)
 
@@ -23,8 +26,9 @@ def predict():
         htn = request.form['htn']
         appet = request.form['appet']
         pe = request.form['pe']
-        print(bp,al,su,rbc,pc,bgr,sc,pot,hemo,htn,appet,pe)
-        return render_template('predict.html',prediction=1)
+        arr = np.array([[bp,al,su,rbc,pc,bgr,sc,pot,hemo,htn,appet,pe]])
+        pred = model.predict(arr)
+        return render_template('predict.html',prediction=pred)
 
 if __name__ == "__main__":
     app.run(debug = True)
