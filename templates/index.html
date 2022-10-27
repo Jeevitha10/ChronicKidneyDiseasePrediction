@@ -8,6 +8,9 @@
     <!-- title of the project -->
     <title>CHRONIC KIDNEY DISEASE PREDICTION</title>
 
+    <!-- favicon of the project -->
+    <link rel="icon" type="image/png" href="static/images/kidneyicon.png">
+
     <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -53,13 +56,12 @@
                     </li>
 
                     <li class="nav-item px-4 mt-2">
-                        <a class="nav-link" href="https://archive.ics.uci.edu/ml/datasets/chronic_kidney_disease">Terms</a>
+                        <a class="nav-link" href="#attr">Terms</a>
                     </li>
 
                     <li class="nav-item px-4 mt-2">
-                        <a class="nav-link">Accuracy</a>
+                        <a class="nav-link" href="{{ url_for('accuracy')}}">Accuracy</a>
                     </li>
-
                     <li class="nav-item px-4">
                         <a class="btn btn-danger fs-4 px-5 py-2" href="#formpage" role="button">Predict</a>
                     </li>
@@ -267,103 +269,112 @@
         <section class="wrapper">
 
             <div class="card">
-                <h3 class="card-title">CARD TITLE</h3>
+                <h3 class="card-title">BLOOD PRESSURE</h3>
 
-                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                    in a
-                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-
-                <button class="card-btn">READ MORE</button>
+                <p class="card-content">Improving Global Outcomes (KDIGO) guideline recommends BP ≤ 140/90 mmHg for CKD patients 
+                    with urine albumin excretion rate < 30 mg/24 h and ≤ 130/80 mmHg for CKD patients with 
+                    moderately or severely increased albuminuria</p>
+                <a class="card-btn" href='https://kdigo.org/guidelines/blood-pressure-in-ckd/' target="_blank">READ MORE</a>
             </div>
 
             <div class="card">
-                <h3 class="card-title">CARD TITLE</h3>
+                <h3 class="card-title">BLOOD GLUCOSE RANDOM</h3>
 
-                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                    in a
-                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-
-                <button class="card-btn">READ MORE</button>
+                <p class="card-content">A person with CKD is at risk for low blood sugar because of changes in 
+                    appetite and meal routine. When kidney function declines insulin and other diabetes medications 
+                    remain in the system longer because of decreased kidney clearance.</p>
+                <a class="card-btn" href='https://www.davita.com/education/kidney-disease/risk-factors/high-blood-sugar-and-chronic-kidney-disease' target="_blank">READ MORE</a>
             </div>
 
             <div class="card">
-                <h3 class="card-title">CARD TITLE</h3>
+                <h3 class="card-title">POTASSIUM</h3>
 
-                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                    in a
-                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-
-                <button class="card-btn">READ MORE</button>
+                <p class="card-content">People with chronic kidney disease (CKD) have a high risk for hyperkalemia, 
+                    due in part to the effects of kidney dysfunction on potassium homeostasis. It is reported that hyperkalemia frequency is as high as 40-50% in
+                    people with chronic kidney disease .</p>
+                <a class="card-btn" href='https://www.davita.com/diet-nutrition/articles/basics/potassium-and-chronic-kidney-disease' target="_blank">READ MORE</a>
             </div>
 
             <div class="card">
-                <h3 class="card-title">CARD TITLE</h3>
+                <h3 class="card-title">ALBUMIN</h3>
 
-                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                    in a
-                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-
-                <button class="card-btn">READ MORE</button>
+                <p class="card-content">Albumin provides the body with the protein needed 
+                to both maintain growth and repair tissues.If your albumin level is good, fluid will move more easily 
+                from swollen tissues into the blood, where it can then 
+                be removed by the dialyzer. </p>
+                <a class="card-btn" href='https://www.dpcedcenter.org/news-events/news/albumin-and-chronic-kidney-disease/' target="_blank">READ MORE</a>
             </div>
 
             <div class="card">
-                <h3 class="card-title">CARD TITLE</h3>
+                <h3 class="card-title">HEMOGLOBIN</h3>
 
-                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                    in a
-                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <p class="card-content">Low hemoglobin can be a marker for the severity of kidney disease. However, in people with CKD, the 
+                    mean GFR of those with low hemoglobin was 44.7 ml/min per 1.73 m2, 
+                    compared with a mean GFR of 49.2 ml/min per 1.73 m2 in people with higher hemoglobin.</p>
 
-                <button class="card-btn">READ MORE</button>
+                <a class="card-btn" href='https://www.niddk.nih.gov/health-information/kidney-disease/anemia#:~:text=Anemia%20in%20people%20with%20CKD,to%20make%20red%20blood%20cells.' target="_blank">READ MORE</a>
             </div>
 
             <div class="card">
-                <h3 class="card-title">CARD TITLE</h3>
+                <h3 class="card-title">RBC COUNT</h3>
 
-                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                    in a
-                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-
-                <button class="card-btn">READ MORE</button>
+                <p class="card-content">When your kidneys are damaged, they produce less erythropoietin(EPO), a hormone that signals your 
+                    bone marrow to make red blood cells. 
+                    With less EPO, your body makes fewer red blood cells, and less oxygen is delivered to your organs and tissues.</p>
+                <a class="card-btn" href='https://www.kidney.org/atoz/content/what_anemia_ckd' target="_blank">READ MORE</a>
             </div>
 
             <div class="card">
-                <h3 class="card-title">CARD TITLE</h3>
+                <h3 class="card-title">SUGAR</h3>
 
-                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                    in a
-                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-
-                <button class="card-btn">READ MORE</button>
+                <p class="card-content">High sugar levels in the blood can cause kidney vessels to become narrow and clogged. 
+                    Without enough blood, the kidneys become damaged and albumin (a type of protein) 
+                    passes through these filters and ends up in the urine where it should not be. Nerves in your body.</p>
+                <a class="card-btn" href='https://www.kidney.org/atoz/content/Diabetes-and-Kidney-Disease-Stages1-4' target="_blank">READ MORE</a>
             </div>
 
             <div class="card">
-                <h3 class="card-title">CARD TITLE</h3>
+                <h3 class="card-title">PUS CELL</h3>
 
-                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                    in a
-                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-
-                <button class="card-btn">READ MORE</button>
+                <p class="card-content">When the body detects an infection, it sends neutrophils to destroy the fungi or bacteria.
+                    During this process, some of the neutrophils and tissue surrounding the infected area will die. 
+                    Pus is an accumulation of this dead material. Many types of infection can cause pus.</p>
+                <a class="card-btn" href='https://doctor.ndtv.com/faq/do-large-number-of-pus-cells-in-urine-harm-the-kidneys-13337' target="_blank">READ MORE</a>
             </div>
 
             <div class="card">
-                <h3 class="card-title">CARD TITLE</h3>
+                <h3 class="card-title">SERUM CREATININE</h3>
 
-                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                    in a
-                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-
-                <button class="card-btn">READ MORE</button>
+                <p class="card-content">A serum creatinine level of greater than 1.2 for women and greater than 1.4 
+                for men may be an early sign that the kidneys are not working properly. Several factors can cause high creatinine levels. 
+                As kidney disease progresses, the level of serum creatinine in the blood rises.</p>
+                <a class="card-btn" href='https://www.kidney.org/atoz/content/what-creatinine' target="_blank">READ MORE</a>
             </div>
 
             <div class="card">
-                <h3 class="card-title">CARD TITLE</h3>
+                <h3 class="card-title">APPETITE</h3>
 
-                <p class="card-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                    in a
-                    piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                <p class="card-content">Anorexia is common in patients with CKD and may result from alterations in orexigenic (appetite stimulating) and 
+                    anorexigenic (appetite inhibiting) 
+                    hormones, accumulation of metabolic waste products in the body in kidney failure and
+                    abnormal taste. </p>
+                <a class="card-btn" href='https://www.davita.com/diet-nutrition/articles/basics/dealing-with-appetite-problems-for-dialysis-patients' target="_blank">READ MORE</a>
+            </div>
+            <div class="card">
+                <h3 class="card-title">PEDAL EDEMA</h3>
 
-                <button class="card-btn">READ MORE</button>
+                <p class="card-content">Bilateral pedal edema is the most common symptom in chronic kidney diseased patients. It occurs due to the loss of 
+                    functioning of the kidney. This may lead to fluid 
+                    accumulation in the body and also an accumulation of excretory products or waste products increases in blood.</p>
+                <a class="card-btn" href='https://www.openaccessjournals.com/articles/cilnidipine-adverse-effect-in-hypertensive-chronic-kidney-disease-patient-with-pedal-edema-a-case-report-12941.html#:~:text=Bilateral%20pedal%20edema%20is%20the,levels%20are%20increases%20in%20blood' target="_blank">READ MORE</a>
+            </div>
+            <div class="card">
+                <h3 class="card-title">HYPER TENSION</h3>
+
+                <p class="card-content">Hypertension is both a cause and effect of CKD and affects the vast majority of CKD patients. High blood pressure 
+                    can make your kidneys worser. Control of hypertension is important in those with CKD as it leads to 
+                    slowing of disease progression as well as reduced CVD risk. </p>
+                <a class="card-btn" href='https://www.ajkd.org/article/S0272-6386(19)30094-0/fulltext' target="_blank">READ MORE</a>
             </div>
         </section>
     </div>
@@ -380,14 +391,14 @@
                             <h3 class="f-title f_600 t_color f_size_18">References</h3>
 
                             <ul class="list-unstyled f_list">
-                                <li><a href="https://ieeexplore.ieee.org/document/9094581">Prediction of CKD</a></li>
+                                <li><a href="https://ieeexplore.ieee.org/document/9094581" target="_blank">Prediction of CKD</a></li>
 
-                                <li><a href="https://ieeexplore.ieee.org/document/9525378">Comprehensive
+                                <li><a href="https://ieeexplore.ieee.org/document/9525378" target="_blank">Comprehensive
                                         unsupervised</a></li>
 
-                                <li><a href="https://ieeexplore.ieee.org/document/9543546">Early prediction</a></li>
+                                <li><a href="https://ieeexplore.ieee.org/document/9543546" target="_blank">Early prediction</a></li>
 
-                                <li><a href="https://ieeexplore.ieee.org/document/8239857">Identifying important
+                                <li><a href="https://ieeexplore.ieee.org/document/8239857" target="_blank">Identifying important
                                         attributes</a></li>
                             </ul>
                         </div>
@@ -403,7 +414,7 @@
 
                                 <li><a href="#">Documentation</a></li>
 
-                                <li><a href="https://www.nhm.tn.gov.in/en/nhm-programsnon-communicable-diseases/national-dialysis-programmendp">NDP
+                                <li><a href="https://www.nhm.tn.gov.in/en/nhm-programsnon-communicable-diseases/national-dialysis-programmendp" target="_blank">NDP
                                         events Tamilnadu</a></li>
                             </ul>
                         </div>
@@ -455,6 +466,7 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
 
+    <!-------------------------- chatbot script ---------------------------->
     <script src="https://account.snatchbot.me/script.js"></script>
     <script>window.sntchChat.Init(272514)</script>
 
