@@ -9,7 +9,7 @@
     <title>CHRONIC KIDNEY DISEASE RESULTS</title>
 
     <!-- favicon of the project -->
-    <link rel="icon" type="image/png" href="static/images/result.png">
+    <link rel="icon" type="image/png" href="static/images/kidneyicon.png">
 
     <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -28,9 +28,11 @@
     <div data-bot-id="272514">  
     </div> 
     
-    <img class="resulticon" src="{{url_for('static', filename='images/result.png')}}" alt="resulticon">
+    <a class="navbar-brand fs-2 nav-link resulticon" href="/">
+        <img class="kidneyicon" src="{{url_for('static', filename='images/kidneyicon.png')}}" alt="kidneyicon"> RENAL
+    </a>
 
-    <a class="btn btn-danger fs-4 px-5 py-2" href="{{ url_for('home')}}">Back</a>
+    <a class="btn btn-danger fs-4 px-5 py-2 backbtn" href="{{ url_for('home')}}">Back</a>
 
     <h1 class="title">PREDICTION RESULT</h1>
 
@@ -51,21 +53,13 @@
             <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
             <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
         </svg>
+        <img class="successgif" src="{{url_for('static', filename='images/predictgifnonckd.gif')}}" alt="successgif">
 		<p class='success'>You don't have CHRONIC KIDNEY DISEASE</p>  
         <h3>You are healthy</h3> 
-
+       
+        
 		{% endif %}
 	</div>
-    
-    <footer class="new_footer_area bg_color">
-        <div class="new_footer_top">    
-            <div class="footer_bg">
-                <div class="footer_bg_one"></div>
-
-                <div class="footer_bg_two"></div>
-            </div>
-        </div>
-    </footer>
 
     <script src="https://account.snatchbot.me/script.js"></script>
     <script>window.sntchChat.Init(272514)</script>
