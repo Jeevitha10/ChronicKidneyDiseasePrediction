@@ -40,6 +40,11 @@ svg {
   margin: 40px auto 0;
 }
 
+.errorgif{
+  width: 250px;
+  margin-top: -80px;
+}
+
 .successgif{
   width: 250px;
   margin-top: -80px;
@@ -80,6 +85,7 @@ p.success {
 
 p.error {
   color: #dc3545;
+  font-weight: bolder;
 }
 
 @-webkit-keyframes dash {

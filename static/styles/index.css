@@ -129,23 +129,7 @@ form section .input-container textarea {
     resize: none;
 }
 
-form .send-container {
-    text-align: center;
-}
-
-form .send-container input {
-    margin: 1.2rem;
-    background: #dc3545;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-form .send-container input:hover {
+.submitbtn:hover {
     background: #d82234;
 }
 
@@ -154,6 +138,11 @@ form:after {
     display: block;
     clear: both;
 }
+
+.submitbtn{
+    margin: 0 46%;
+}
+
 /****************************** end of second page styling ***************************/
 
 /****************************** attributes page styling ******************************/
