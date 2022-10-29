@@ -32,6 +32,13 @@ body {
   width: 20rem;
 }
 
+.accuracy-left {
+  position: absolute;
+  left: 40px;
+  margin-top: 4px;
+  width: 20rem;
+}
+
 .kidneyaffected {
   position: absolute;
   left: 40px;
@@ -152,7 +159,16 @@ body {
   top: 5%;
   left: 5%;
 }
-
+.label{
+  position: absolute;
+  font-size: 20px;
+  z-index: 999;
+  top: 30px;
+  left: 50px;
+}
+.label-ex{
+  left: 30%;
+}
 .progress.blue .progress-bar {
   border-color: #049dff;
 }
@@ -254,23 +270,24 @@ body {
     font-size: 2rem;
   }
 
-  .bar{
-    margin-left: 0;
-    margin-right: 0;
-  }
   .resulticon {
     display: none;
   }
 }
 
 @media (max-width: 650px){
-  .accuracy{
+  .accuracy, .accuracy-left{
     display: none;
+  }
+
+  .bar{
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
 @media (max-width: 1170px){
-  .accuracy{
+  .accuracy, .accuracy-left{
     margin-top: 7rem !important ;
   }
 }
