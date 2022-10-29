@@ -166,7 +166,7 @@ body {
 }
 
 .progress.yellow .progress-left .progress-bar {
-  animation: loading-2 1.8s linear forwards 1.8s;
+  animation: loading-3 1.8s linear forwards 1.8s;
 }
 
 .progress.green .progress-bar {
@@ -174,7 +174,7 @@ body {
 }
 
 .progress.green .progress-left .progress-bar {
-  animation: loading-4 1.8s linear forwards 1.8s;
+  animation: loading-2 1.8s linear forwards 1.8s;
 }
 
 @keyframes loading-1 {
@@ -196,8 +196,8 @@ body {
   }
 
   100% {
-    -webkit-transform: rotate(144deg);
-    transform: rotate(144deg);
+    -webkit-transform: rotate(140deg);
+    transform: rotate(140deg);
   }
 }
 
@@ -208,8 +208,8 @@ body {
   }
 
   100% {
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
+    -webkit-transform: rotate(153deg);
+    transform: rotate(153deg);
   }
 }
 
