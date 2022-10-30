@@ -27,7 +27,7 @@
 <body>
     <div data-bot-id="272514">  
     </div> 
-    
+    <!-------------------------------------- prediction result pg ------------------------------------------------>
     <a class="navbar-brand fs-2 nav-link resulticon" href="/">
         <img class="kidneyicon" src="{{url_for('static', filename='images/kidneyicon.png')}}" alt="kidneyicon"> RENAL
     </a>
@@ -36,6 +36,7 @@
 
     <h1 class="title">PREDICTION RESULT</h1>
 
+    <!----------------------------------------- result condn ---------------------------------------------------->
 	<div class="results">
 		{% if prediction==0 %}
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
@@ -59,8 +60,10 @@
        
         
 		{% endif %}
+        <!-------------------------------------- end of result condn ----------------------------------------------->
 	</div>
 
+    <!-------------------------- chatbot script ---------------------------->
     <script src="https://account.snatchbot.me/script.js"></script>
     <script>window.sntchChat.Init(272514)</script>
 

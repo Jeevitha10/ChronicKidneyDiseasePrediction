@@ -15,16 +15,7 @@ body {
   overflow: hidden;
 }
 
-.progress.blue .ui-labels {
-  left: 0;
-  bottom: -16px;
-  text-shadow: 0 0 4px grey;
-  color:black;
-  position: absolute;
-  width: 100%;
-  font-size: 16px;
-}
-
+/******************* accuracy page styling ***********************/
 .accuracy {
   position: absolute;
   right: 40px;
@@ -74,7 +65,7 @@ body {
 .bar {
   text-align: center;
   margin-top: 60px;
-  margin-right: -50px;
+  margin-right: 10px;
   margin-left: 100px;
 }
 
@@ -224,8 +215,8 @@ body {
   }
 
   100% {
-    -webkit-transform: rotate(153deg);
-    transform: rotate(153deg);
+    -webkit-transform: rotate(154deg);
+    transform: rotate(154deg);
   }
 }
 
@@ -236,10 +227,12 @@ body {
   }
 
   100% {
-    -webkit-transform: rotate(170deg);
-    transform: rotate(170deg);
+    -webkit-transform: rotate(172deg);
+    transform: rotate(172deg);
   }
 }
+
+/************************* end of accuracy page styling **********************/
 
 /****************************** footer styling ******************************/
 .new_footer_top {
@@ -257,6 +250,15 @@ body {
 }
 
 /****************************** end of footer styling ***********************/
+
+/****************************** chat bot styling ************************/
+#sntch_button{
+  position:absolute;
+  bottom: 45px !important;
+  right: 45px !important;
+}
+
+/****************************** end of chat bot styling ************************/
 
 /****************************** responsiveness ******************************/
 @media (max-width: 920px) {
@@ -281,7 +283,7 @@ body {
   }
 
   .bar{
-    margin-left: 20px;
+    margin-left: 10px;
     margin-right: 20px;
   }
 }

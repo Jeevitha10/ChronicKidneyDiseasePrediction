@@ -28,6 +28,7 @@
     <div data-bot-id="272514">
     </div>
 
+    <!----------------------------------------- accuracy pg ------------------------------------------------------->
     <a class="navbar-brand fs-2 nav-link resulticon" href="{{ url_for('accuracy')}}">
         <img class="accuracyicon" src="{{url_for('static', filename='images/accuracyicon.png')}}" alt="accuracyicon">
     </a>
@@ -39,6 +40,7 @@
 
     <img class="accuracy" src="{{url_for('static', filename='images/accuracy.gif')}}" alt="acc">
 
+    <!------------------------------------------- progress bar --------------------------------------------------->
     <div class="row d-flex justify-content-center">
         <div class="bar col-5">
             <div class="progress blue" title="Linear SVM">
@@ -73,13 +75,18 @@
             </div>
         </div>
     </div>
+    <!--------------------------------- end of progress bar ----------------------------------------->
+    <!----------------------------------- end of accuracy pg ---------------------------------------->
 
+    <!--------------------------- footer ----------------------------------->
     <footer class="new_footer_area bg_color">
         <div class="new_footer_top">
             <div class="footer_bg">
             </div>
         </div>
     </footer>
+    <!----------------------- end of footer -------------------------------->
+
     <!-------------------------- chatbot script ---------------------------->
     <script src="https://account.snatchbot.me/script.js"></script>
     <script>window.sntchChat.Init(272514)</script>

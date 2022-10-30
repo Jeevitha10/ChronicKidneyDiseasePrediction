@@ -9,6 +9,7 @@ body {
     text-align: center;
 }
 
+/*********************** result page styling *************************/
 .resulticon {
   position:absolute;
   left: 40px;
@@ -129,6 +130,17 @@ p.error {
   bottom: 50px !important;
   right: 50px !important;
 }
+
+/*********************** end of result page styling **************************/
+
+/****************************** chat bot styling *****************************/
+#sntch_button{
+  position:absolute;
+  bottom: 50px !important;
+  right: 50px !important;
+}
+
+/****************************** end of chat bot styling ************************/
 
 /****************************** responsiveness ******************************/
 @media (max-width: 920px) {
